@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+@import 'additional-styles/custom-fonts';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/range-slider.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/theme.scss';
+
+@import 'additional-styles/book.css';
+@import 'additional-styles/buttons.css';
+@import 'additional-styles/card.css';
+@import 'additional-styles/code.css';
+
+@import 'additional-styles/colors.css';
+@import 'additional-styles/drop.css';
+@import 'additional-styles/fishIcon.css';
+@import 'additional-styles/loader.css';
+
+@import 'additional-styles/menu.css';
+@import 'additional-styles/overlay.css';
+@import 'additional-styles/style.css';
+
+@import 'tailwindcss/utilities';
+@import 'node_modules/aos/src/sass/aos.scss';
+/* @import 'additional-styles/slick.css'; */
+
+/* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
+@layer utilities {
+    .rtl {
+        direction: rtl;
+    }
+}
+

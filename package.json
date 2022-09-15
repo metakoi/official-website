@@ -1,0 +1,38 @@
+{
+  "name": "neon-react",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "3d-react-carousal": "^5.0.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "aos": "^3.0.0-beta.6",
+    "gh-pages": "^4.0.0",
+    "i18next": "^21.8.14",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-i18next": "^11.18.1",
+    "react-router-dom": "^6.3.0",
+    "react-slick": "^0.29.0",
+    "react-spring": "^9.5.3",
+    "react-spring-3d-carousel": "^1.2.1",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "sass": "^1.54.9",
+    "tailwindcss": "^3.1.6",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0"
+  }
+}
