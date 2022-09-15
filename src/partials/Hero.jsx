@@ -547,7 +547,7 @@ function Hero() {
                 <a
                   target={'_blank'}
                   className="btn text-white bg-gradient-to-t from-blue-600 to-blue-400 hover:to-blue-500 w-full shadow-lg group"
-                  href=""
+                  href="https://metakoi.github.io/stand-alone/"
                 >
                   {t('home.hero.open_app')}{" "}
                   <span className="tracking-normal text-blue-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">

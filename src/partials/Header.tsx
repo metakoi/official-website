@@ -90,12 +90,13 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/official-website/pricing"
+                <a
+                  target={"_blank"}
+                  href='https://koifarm-office.gitbook.io/koi-farm-whitepaper/'
                   className={`${location.pathname == '/official-website/pricing'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
                 >
                   {t('header.white_paper')}
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
