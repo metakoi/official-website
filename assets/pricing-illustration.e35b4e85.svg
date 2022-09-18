@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="618" height="468" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+   <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+   <stop offset="100%" stop-color="#3B82F6"/>
+  </linearGradient>
+  <filter filterUnits="objectBoundingBox" height="175%" id="b" width="175%" x="-37.5%" y="-37.5%">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="50"/>
+  </filter>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <circle cx="298" cy="224" fill="url(#a)" fill-opacity="0.48" fill-rule="evenodd" filter="url(#b)" id="svg_1" r="200"/>
+ </g>
+</svg>
