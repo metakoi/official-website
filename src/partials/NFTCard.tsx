@@ -3,7 +3,7 @@ import moment from "moment";
 
 function NFTCard(props) {
   return (
-    <div className="h-full w-80">
+    <div className="h-full">
       <div className="relative p-0.5 bg-gradient-to-tl from-fuchsia-400 to-emerald-400 w-full">
         <div className="absolute top-0 right-0 mr-6 z-10 hidden">
           <div className="inline-flex items-center text-sm font-semibold py-1 px-3 text-red-600 bg-red-200 rounded-full">
@@ -20,75 +20,40 @@ function NFTCard(props) {
         </div>
 
         <div className="h-full w-full bg-gray-900   flex flex-col justify-center items-center">
-          <div className="card p-6">
+          <div className="card p-10">
             <div className="preview-frame">
-              {
-                props.data.type != 'box' && <div className={`preview-animation`} style={{
+               <div className={`preview-animation`} style={{
                   backgroundImage:`url(${props.data.image})`
-                }}></div>
-              }
-              {
-                props.data.type == 'box' && <div className={``} style={{
-                  backgroundImage:`url(${props.data.image})`,
-                  width:'200px',
-                  height:'120px'
-                }}></div>
-              }
-              
-              {/* preview-frame preview-animation  bg-[url('/images/koi-yellow.png')]`} */}
-              {/* preview-animation  bg-[url('/images/koi-white.png')] */}
+                }}/>
             </div>
           </div>
-
-          <div className="bg-gradient-to-tr from-gray-700 to-gray-800 p-4 w-full h-full space-y-4">
-            <div className="flex flex-row justify-between items-center">
-              <div className="text-lg font-semibold mb-1 inline-flex items-baseline">{props.data.name}</div>
-              <span className="text-slate-300 font-medium	">
-                <span>
-                {props.data.limit - props.data.minted}
-                </span>
-                /
-                <span className="">
+        </div>
+        
+        <div className="bg-gradient-to-tr from-gray-700 to-gray-800 p-4 w-full h-full space-y-4">
+          {/* title */}
+          <div className="h4 font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-emerald-400 to-fuchsia-400">
+            {props.data.name}
+          </div>
+          {/* info */}
+          <div className="text-lg space-y-4 font-uncut-sans font-semibold">
+            <div className="flex flex-row justify-between">
+              <span className="text-slate-400">
+                总量
+              </span>
+              <span>
                 {props.data.limit}
-                </span>
-               
               </span>
             </div>
-            <div className="font-uncut-sans inline-flex items-baseline mb-2  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-emerald-400 to-fuchsia-400 gap-2">
-              <span className="text-4xl font-bold leading-7">{props.data.price}</span>
-              <span className="text-3xl font-medium">
-                {props.data.priceUnit}
+            <div className="flex flex-row justify-between">
+              <span className="text-slate-400">
+                剩余
+              </span>
+              <span>
+                {props.data.limit-props.data.minted}
               </span>
             </div>
-            
-
-            <div className=" mb-6 flex flex-row item-end">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="text-orange-500 w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              {
-                new Date().getTime() < props.data.startTime && 
-                <span className="text-white">
-              {`Sale starts ${moment(props.data.startTime).format("MMMM Do YYYY")} at ${moment(props.data.startTime).format("hh:mm:ss a")}`}
-              </span>
-              }
-              {
-                new Date().getTime() > props.data.startTime && new Date().getTime() < props.data.startTime && 
-                <span className="text-white">
-              {`Sale ends ${moment(props.data.endTime).format("MMMM Do YYYY")} at ${moment(props.data.endTime).format("hh:mm:ss a")}`}
-              </span>
-              }
-            </div>
-            <a
-              className="btn-sm text-white bg-gradient-to-t from-blue-600 to-blue-400 hover:to-blue-500 w-full shadow-lg group"
-              href="#0"
-            >
-              铸造{" "}
-              <span className="tracking-normal text-blue-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                -&gt;
-              </span>
-            </a>
           </div>
+          
         </div>
       </div>
     </div>

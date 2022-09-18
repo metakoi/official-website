@@ -25,7 +25,7 @@ const resources = {
       "China Title":"🇨🇳 Liu Guofu：",
       "Philippines Title":"🇵🇭 Mark John Sanchez：",
       "Russia Title":"🇨🇷 Anton Gerashchenko：",
-      "China Content":"META KOI, let my TCP be resurrected.",
+      "China Content":"META KOI, let my crypto assets be resurrected.",
       "Philippines Content":"Since having the META KOI platform, he has increased my income a lot.",
       "Russia Content":"There is no reward in the world to encourage hard work, all rewards are only used to reward the results of work.",
     }

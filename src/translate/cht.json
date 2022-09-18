@@ -1,10 +1,11 @@
 {
   "Welcome to React": "Bienvenue à React et react-i18next",
   "header":{
-    "how_to":"怎么玩?",
-    "white_paper":"白皮书",
-    "lite_paper":"精简稿",
-    "link_tree":"链接",
+    "home":"主页",
+    "mysterybox":"神秘盒子",
+    "whitepaper":"白皮书",
+    "litepaper":"精简稿",
+    "linktree":"链接",
     "market":"市场",
     "token_economics":"代幣經濟學",
     "blog":"博客",
@@ -40,7 +41,7 @@
       "feedback":{
         "china":{
           "title":"🇨🇳 劉國福：",
-          "content":"META KOI，讓我的TCP，重新復活了。"
+          "content":"META KOI，讓我的加密资产，重新復活了。"
         },
         "philippines":{
           "title":"🇵🇭 馬克·約翰·桑切斯：",
@@ -84,7 +85,7 @@
       },
       "two":{
         "title":"META KOI Finance",
-        "sub_title":"更好的交易和賺錢方式，支持使用USDT、TCP交易賺取利潤。",
+        "sub_title":"更好的交易和賺錢方式，支持使用USDT、BTC交易賺取利潤。",
         "btn":"探索交易"
       }
     }

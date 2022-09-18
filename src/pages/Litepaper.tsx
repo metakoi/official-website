@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../partials/Header';
-import Hero from '../partials/Hero';
+import LiteHero from '../partials/LiteHero';
 import PressLogos from '../partials/PressLogos';
 import Features from '../partials/Features';
 import Features02 from '../partials/Features02';
@@ -10,9 +10,14 @@ import Testimonials from '../partials/Testimonials';
 import Resources from '../partials/Resources';
 import Cta from '../partials/Cta';
 import Footer from '../partials/Footer';
-import Word from '../partials/Word';
+import LiteWhat from '../partials/LiteWhat';
+import LiteProfit from '../partials/LiteProfit';
+import LiteToken from '../partials/LiteToken';
+import LiteTokennomic from '../partials/LiteTokennomic';
+import LiteKmt from '../partials/LiteKmt';
+import LiteBurn from '../partials/LiteBurn';
 
-function Home() {
+function Litepaper() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -23,15 +28,19 @@ function Home() {
       <main className="grow">
 
         {/*  Page sections */}
-        <Hero />
-        <Pricing />
-        <Features />
-        <Features02 />
-        <Word />
+        <LiteHero/>
+        {/* <Pricing />
+        <Features /> */}
+        <LiteWhat />
+        <LiteProfit />
+        <LiteToken />
+        <LiteTokennomic />
+        <LiteKmt/>
+        {/* <LiteBurn/> */}
         {/* <Testimonials /> */}
-        <PressLogos />
+        {/* <PressLogos /> */}
 
-        <Resources />
+        {/* <Resources /> */}
 
 
         {/* <Cta /> */}
@@ -46,4 +55,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Litepaper;

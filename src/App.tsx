@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import {
+  HashRouter,
   Routes,
   Route,
   useLocation
@@ -10,10 +11,9 @@ import './css/style.scss';
 import AOS from 'aos';
 
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import ResetPassword from './pages/ResetPassword';
+import CommingSoon from './pages/CommingSoon';
 import PageNotFound from './pages/PageNotFound';
+import Litepaper from './pages/Litepaper';
 
 function App() {
 
@@ -38,9 +38,9 @@ function App() {
     <>
       <Routes>
         <Route path="/official-website/" element={<Home />} />
-        <Route path="/official-website/signin" element={<SignIn />} />
-        <Route path="/official-website/signup" element={<SignUp />} />
-        <Route path="/official-website/reset-password" element={<ResetPassword />} />
+        <Route path="/official-website/mysterybox" element={<CommingSoon />} />
+        <Route path="/official-website/litepaper" element={<Litepaper />} />
+        <Route path="/official-website/market" element={<CommingSoon />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

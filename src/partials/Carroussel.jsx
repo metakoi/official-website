@@ -11,7 +11,7 @@ function Carroussel(props) {
   const [offsetRadius, setOffsetRadius] = useState(2);
   const [showArrows, setShowArrows] = useState(false);
   const [goToSlide, setGoToSlide] = useState(null);
-  const [cards] = useState(table);
+  // const [cards] = useState(table);
 
   useEffect(() => {
     setOffsetRadius(props.offset);
@@ -23,7 +23,7 @@ function Carroussel(props) {
       style={{ width: props.width, height: props.height, margin: props.margin }}
     >
       <Carousel
-        slides={cards}
+        slides={table}
         goToSlide={goToSlide}
         offsetRadius={offsetRadius}
         showNavigation={showArrows}

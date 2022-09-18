@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Illustration from '../images/cta-illustration.svg';
 
@@ -15,14 +16,14 @@ function Cta() {
           <div className="flex flex-col lg:flex-row justify-between items-center">
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
-              <h3 className="text-4xl font-bold font-uncut-sans mb-2">开始玩赚 META KOI</h3>
+              <h3 className="text-4xl font-bold font-uncut-sans mb-2 ">开始玩赚 META KOI</h3>
               <p className="text-blue-200">只需几分钟即可开始META KOI。玩赚，立即开始。</p>
             </div>
             {/* CTA button */}
             <div className="shrink-0" onClick={(e)=>{console.log(11111)}}>
-              <a  className="btn-sm text-white bg-gradient-to-t from-blue-600 to-blue-400 hover:to-blue-500 w-full group shadow-lg" href="#genesis" >
+              <Link to={"/official-website/mysterybox"}  className="btn-sm text-white bg-gradient-to-t from-blue-600 to-blue-400 hover:to-blue-500 w-full group shadow-lg" href="#genesis" >
                 立即开始 <span className="tracking-normal text-blue-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

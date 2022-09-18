@@ -490,19 +490,7 @@ function Hero() {
         className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 to-gray-900 opacity-60 h-[10rem] pointer-events-none -z-10"
         aria-hidden="true"
       />
-      {/* Illustration */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 pointer-events-none -z-10"
-        aria-hidden="true"
-      >
-        <img
-          src={Illustration}
-          className="max-w-none"
-          width="2143"
-          height="737"
-          alt="Hero Illustration"
-        />
-      </div>
+      
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Hero content */}
@@ -555,14 +543,14 @@ function Hero() {
                   </span>
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <a
                   className="btn text-gray-300 bg-gradient-to-t from-gray-800 to-gray-700 hover:to-gray-800 w-full shadow-lg"
                   href="#0"
                 >
                   {t('home.hero.community_activity')}
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

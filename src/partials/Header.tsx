@@ -42,6 +42,41 @@ function Header() {
   });
   const location = useLocation();
 
+  const headers:any = [
+    {
+      name:"home",
+      url:"/official-website/",
+      source:"internal",//source:"external",
+    },
+    {
+      name:"mysterybox",
+      url:"/official-website/mysterybox",
+      source:"internal",//source:"external",
+    },
+    {
+      name:"whitepaper",
+      url:"https://koifarm-office.gitbook.io/koi-farm-whitepaper/",
+      source:"external",//source:"external",
+      target:"_blank",
+    },
+    {
+      name:"litepaper",
+      url:"/official-website/litepaper",
+      source:"internal",//source:"external",
+      target:"_blank",
+    },
+    {
+      name:"linktree",
+      url:"https://koifarm-office.gitbook.io/koi-farm-whitepaper/",
+      source:"external",//source:"external",
+    },
+    {
+      name:"market",
+      url:"/official-website/market",
+      source:"internal",//source:"external",
+    }
+  ];
+
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -73,56 +108,30 @@ function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop menu links */}
             <ul className="flex grow justify-end flex-wrap items-center text-gray-300">
-              <li>
-                <Link
-                  to="/official-website/"
-                  className={`${location.pathname == '/official-website/'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {'主页'}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/official-website/features"
-                  className={`${location.pathname == '/official-website/features'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {t('header.how_to')}
-                </Link>
-              </li>
-              <li>
-                <a
-                  target={"_blank"}
-                  href='https://koifarm-office.gitbook.io/koi-farm-whitepaper/'
-                  className={`${location.pathname == '/official-website/pricing'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {t('header.white_paper')}
-                </a>
-              </li>
-              <li>
-                <Link
-                  to="/official-website/blog"
-                  className={`${location.pathname == '/official-website/blog'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {t('header.lite_paper')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/official-website/about"
-                  className={`${location.pathname == '/official-website/about'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {t('header.link_tree')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/official-website/about1"
-                  className={`${location.pathname == '/official-website/about1'?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
-                >
-                  {t('header.market')}
-                </Link>
-              </li>
-              
+              {
+                headers.map((o)=>{
+                  if(o.source === 'internal'){
+                    return <li>
+                      <Link
+                        to={o.url}
+                        className={`${location.pathname == o.url?'text-green-200':''} hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
+                      >
+                        {t("header."+o.name)}
+                      </Link>
+                    </li>
+                  }else{
+                    return <li>
+                      <a
+                        target={o.target}
+                        href={o.url}
+                        className={` hover:text-green-200 text-lg font-medium px-4 py-2 flex items-center transition duration-150 ease-in-out`}
+                      >
+                        {t("header."+o.name)}
+                      </a>
+                    </li>
+                  }
+                })
+              }
             </ul>
 
             {/* Desktop sign in links */}
@@ -240,54 +249,30 @@ function Header() {
               }
             >
               <ul className="bg-gray-800 px-4 py-2">
-                <li>
-                  <Link
-                    to="/official-website/"
-                    className={`${location.pathname == '/official-website/'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    主页
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/official-website/features"
-                    className={`${location.pathname == '/official-website/features'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    {t('header.how_to')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/official-website/pricing"
-                    className={`${location.pathname == '/official-website/pricing'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    {t('header.white_paper')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/official-website/blog"
-                    className={`${location.pathname == '/official-website/blog'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    {t('header.lite_paper')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/official-website/about"
-                    className={`${location.pathname == '/official-website/about'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    {t('header.link_tree')}
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/official-website/about1"
-                    className={`${location.pathname == '/official-website/about1'?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
-                  >
-                    {t('header.market')}
-                  </Link>
-                </li>
+                {
+                  headers.map((o)=>{
+                    if(o.source === 'internal'){
+                      return <li>
+                        <Link
+                          to={o.url}
+                          className={`${location.pathname == o.url?'text-green-200':''} hover:text-green-200 flex text-lg  py-2`}
+                        >
+                          {t("header."+o.name)}
+                        </Link>
+                      </li>
+                    }else{
+                      return <li>
+                        <a
+                          target={o.target}
+                          href={o.url}
+                          className={` hover:text-green-200 flex text-lg  py-2`}
+                        >
+                          {t("header."+o.name)}
+                        </a>
+                      </li>
+                    }
+                  })
+                }
               </ul>
             </nav>
           </div>
